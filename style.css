@@ -146,6 +146,10 @@ footer a{
     padding: 1rem;
     width: max-content;
 }
+
+footer a:hover{
+    background-color: #5a3207;
+}
 /* Modal */
 
 .modal-container.mostrar {
