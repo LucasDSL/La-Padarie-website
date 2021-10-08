@@ -56,6 +56,11 @@ main{
 }
 #total-entrada{
     background-color: #5F3305;
+    color: white;
+}
+#total-entrada > article{
+    color: white;
+    font-weight: 500;
 }
 @media (min-width: 768px) {
     .cards-principais {
@@ -108,7 +113,8 @@ main{
 }
 .totais{
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 .totais > p{
     font-family: 'Poppins', sans-serif;
@@ -123,6 +129,10 @@ main{
     #cards-compradores{
         width: 90%;
     }
+    .totais{
+        flex-direction: row;
+        gap: 1.5rem;
+    }
 }
 
 footer{
@@ -134,7 +144,7 @@ footer{
     font-size: 1.4rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    padding: 8rem 3rem;
+    padding: 4rem;
     gap: 1rem;
 }
 footer a{
@@ -204,9 +214,8 @@ footer a:hover{
 .modal > form > input {
     color:#7D7D7D;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.6rem;
-    padding: 1.6rem 2.5rem;
-    width: calc(100% - 3rem);
+    font-size: 1.4rem;
+    padding: 1.6rem 1rem;
     background-color:#F5F5F5;
     border-radius: 5px;
 }
@@ -223,7 +232,7 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    width: calc(100% - 3rem);
+    padding: 0rem;
 }
 #btn-enviar{
     font-family: 'Poppins', sans-serif;
@@ -258,6 +267,9 @@ input::-webkit-inner-spin-button {
     }
     .modal > h1{
         justify-content: flex-start;
+    }
+    .modal > form > input {
+        font-size: 1.6rem;
     }
     .btns-modal{
         flex-direction: row;

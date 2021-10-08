@@ -31,7 +31,7 @@ let cardsPrincipais = () => {
     `;
 }
 let precoPao = 0.50;
-let listaPessoas = 
+let listaPessoasAtual = 
 [
     {
         id: 0,
@@ -54,11 +54,33 @@ let listaPessoas =
         paes: 40
     }
 ];
-
+let listaPessoasTotal = 
+[
+    {
+        id: 0,
+        nome: 'Adrius',
+        paes: 20
+    },
+    {
+        id: 1,
+        nome: 'Darrow',
+        paes: 35
+    },
+    {
+        id: 2,
+        nome: 'Virginia',
+        paes: 15
+    },
+    {
+        id: 3, 
+        nome: 'Victra',
+        paes: 40
+    }
+];
 let atualizaCardsPrincipais = () => {
     let totalPagar = 0, totalPaes = 0;
-    let totalPessoas = listaPessoas.length;
-    listaPessoas.forEach( pessoa => {
+    let totalPessoas = listaPessoasAtual.length;
+    listaPessoasTotal.forEach( pessoa => {
         totalPagar += pessoa.paes * precoPao;
         totalPaes += pessoa.paes;
     });
@@ -74,7 +96,7 @@ let renderCompradores = () => {
     `
     <a id="btn-add" onclick="iniciaModal('modal-add-cliente')">+ Adicionar pessoas a fila</a>
     `;
-    listaPessoas.forEach( pessoa => {
+    listaPessoasAtual.forEach( pessoa => {
         let idPessoa = Number(pessoa.id);
         let nomePessoa = String(pessoa.nome);
         let totalPagarPessoa = Number(pessoa.paes * precoPao);
@@ -154,11 +176,20 @@ let addComprador = () => {
         window.alert("Campos 'Nome completo do cliente' e 'Total de pães' são obrigatórios!");
         return;
     };
+    if(paesPessoa <= 0){
+        window.alert("Por favor digite um número positivo de pães!");
+        return;
+    }
     nomePessoa = String(nomePessoa);
     paesPessoa = Number(paesPessoa);
-    let tamanhoAtualLista = listaPessoas.length;
-    listaPessoas.push({
+    let tamanhoAtualLista = listaPessoasAtual.length;
+    listaPessoasAtual.push({
         id: tamanhoAtualLista,
+        nome: nomePessoa,
+        paes: paesPessoa
+    });
+    listaPessoasTotal.push({
+        id: tamanhoAtualListaTotal,
         nome: nomePessoa,
         paes: paesPessoa
     });
@@ -169,9 +200,9 @@ let addComprador = () => {
     fechaModal(modal);
 }
 let removeComprador = (id) => {
-    listaPessoas.splice(id, 1);
-    listaPessoas.forEach( pessoa => {
-        pessoa.id = listaPessoas.indexOf(pessoa);
+    listaPessoasAtual.splice(id, 1);
+    listaPessoasAtual.forEach( pessoa => {
+        pessoa.id = listaPessoasAtual.indexOf(pessoa);
     });
     renderCompradores();
 }
