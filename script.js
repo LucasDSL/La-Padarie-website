@@ -183,6 +183,7 @@ let addComprador = () => {
     nomePessoa = String(nomePessoa);
     paesPessoa = Number(paesPessoa);
     let tamanhoAtualLista = listaPessoasAtual.length;
+    let tamanhoAtualListaTotal = listaPessoasTotal.length
     listaPessoasAtual.push({
         id: tamanhoAtualLista,
         nome: nomePessoa,
