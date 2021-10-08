@@ -1,0 +1,252 @@
+
+*{
+    text-decoration: none;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color:#965A1B;
+    padding: 8.0rem 0rem 18rem;
+}
+main{
+    background-color:#E5CF94;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards-principais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    gap: 8.5rem;
+    width: 80%;
+}
+.cards{
+    background-color: white;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 1.7rem;
+    padding: 2rem 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-top: -6rem;
+    width: 100%;
+}
+.cards article{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    color: black;
+}
+.cards > p{
+    font-size: 3.6rem;
+}
+#total-entrada{
+    background-color: #5F3305;
+}
+@media (min-width: 768px) {
+    .cards-principais {
+        flex-direction: row;
+        justify-content: unset;
+        gap: 2.5rem;
+        width: 90%;
+    }
+}
+
+/* Cards compra */
+#cards-compradores{
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 2.5rem;
+}
+#btn-add{
+    align-self: flex-start;
+    color:#5F3305;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.card-compra{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-radius: 5px;
+    align-items: center;
+}
+.card-compra > article{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.card-compra > a{
+    cursor: pointer;
+}
+.titles{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color:#5F3305;
+    font-size: 1.6rem;
+}
+.totais{
+    display: flex;
+    gap: 1.5rem;
+}
+.totais > p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color:#5F3305;
+    font-size: 1.2rem;
+}
+.quantias{
+    font-weight: 400;
+}
+@media (min-width: 768px) {
+    #cards-compradores{
+        width: 90%;
+    }
+}
+
+footer{
+    background-color: #E5CF94;
+    color:#5F3305;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 8rem;
+}
+
+/* Modal */
+
+.modal-container.mostrar {
+    display: flex;
+}
+.modal-container{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(229, 207, 148, 0.5);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    background-color: white;
+    padding: 3rem;
+    width: 90%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes modal{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -6rem, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.mostrar .modal{
+    transform: .3s;
+}
+.modal > h1{
+    display: flex;
+    justify-content: center;
+}
+.modal > form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1.5rem;
+    padding: 2.5rem 0rem 6rem 0rem;
+}
+.modal > form > input {
+    color:#7D7D7D;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    padding: 1.6rem 2.5rem;
+    width: calc(100% - 3rem);
+    background-color:#F5F5F5;
+    border-radius: 5px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#btns-modal > a{
+    cursor: pointer;
+}
+.btns-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: calc(100% - 3rem);
+}
+#btn-enviar{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    color: white;
+    background-color:#5F3305;
+    border-radius: 5px;
+    padding: 1.8rem;
+    font-weight: 600;
+    width: calc(100% - 3rem);
+    text-align: center;
+    cursor: pointer;
+}
+
+#btn-cancelar{
+    color:#DB1E1E;
+    border: 1px solid #DB1E1E;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 1.8rem;
+    background-color: white;
+    width: calc(100% - 3rem);
+    text-align: center;
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    .modal{
+        max-width: 55rem;
+    }
+    .modal > h1{
+        justify-content: flex-start;
+    }
+    .btns-modal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
