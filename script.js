@@ -101,7 +101,8 @@ let footer = () => {
     let year = new Date().getFullYear()
     document.getElementsByTagName("footer")[0].innerHTML =
     `
-    <p>Com 💛 Info Jr UFBA ${year}</p>
+    <p>Com 💛 Info Jr UFBA ${year}<br></p>
+    <a href="https://github.com/LucasDSL/La-Padarie-website">Meu código para este site</a>
     `
 }
 let modal = () => {
