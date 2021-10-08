@@ -134,7 +134,7 @@ footer{
     font-size: 1.4rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    padding: 8rem;
+    padding: 8rem 3rem;
     gap: 1rem;
 }
 footer a{
@@ -144,6 +144,7 @@ footer a{
     background-color: #965A1B;
     border-radius: 5px;
     padding: 1rem;
+    width: max-content;
 }
 /* Modal */
 
