@@ -198,7 +198,7 @@ footer a:hover{
     }
 }
 .mostrar .modal{
-    transform: .3s;
+    animation: modal .3s;
 }
 .modal > h1{
     display: flex;
